@@ -32,10 +32,11 @@ class UserRepository extends RepositoryBase
         return $this->userModel->create($data);
     }
 
-    public function actualizarUsuario(array $data, $id)
+    public function actualizarUsuario(array $data, $idUsuario)
     {
-        $id = $this->userModel->findOrFail($data);
-        return $id->update($data);
+        $usuario = $this->userModel->findOrFail($idUsuario);
+        $usuario->update($data);
+        return $usuario;
     }
 
 }

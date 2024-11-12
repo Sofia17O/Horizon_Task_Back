@@ -8,6 +8,6 @@ Route::prefix('usuarios')->group(function () {
         Route::get('listarUsuarios', 'listarUsuarios');
         Route::get('buscarUsuario/{idUsuario}', 'buscarUsuario');
         Route::post('crearUsuario', 'crearUsuario');
-        Route::post('actualizarUsuario/{id}', 'actualizarUsuario');
+        Route::put('actualizarUsuario/{idUsuario}', 'actualizarUsuario');
     });
 });
